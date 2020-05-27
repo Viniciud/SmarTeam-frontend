@@ -1,6 +1,20 @@
 <app-title [title]='title'></app-title>
-<ul>
-  <li *ngFor="let player of players">
-    {{player.name}}
-  </li>
-</ul>
+
+<table class="table table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Modality</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of players">
+      <th scope="row">{{player.id}}</th>
+      <td>{{player.name}}</td>
+      <td>{{player.mod}}</td>
+      <td>{{player.phone}}</td>
+    </tr>
+  </tbody>
+</table>

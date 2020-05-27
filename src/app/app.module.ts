@@ -9,6 +9,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavComponent } from './nav/nav.component';
 import { TitleComponent } from './title/title.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
    declarations: [
@@ -22,7 +24,9 @@ import { TitleComponent } from './title/title.component';
    ],
    imports: [
       BrowserModule,
-      AppRoutingModule
+      AppRoutingModule,
+      BsDropdownModule.forRoot(),
+      BrowserAnimationsModule
    ],
    providers: [],
    bootstrap: [
