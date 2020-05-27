@@ -2,11 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CoachesComponent } from './coaches/coaches.component';
 import { PlayersComponent } from './players/players.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
   { path: 'coaches', component: CoachesComponent },
   { path: 'players', component: PlayersComponent },
+  { path: 'profile', component: ProfileComponent },
+
 ];
 
 @NgModule({
