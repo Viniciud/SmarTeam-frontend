@@ -7,6 +7,7 @@ import { PlayersComponent } from './players/players.component';
 import { CoachesComponent } from './coaches/coaches.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
    declarations: [
@@ -15,6 +16,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       CoachesComponent,
       ProfileComponent,
       DashboardComponent,
+      NavComponent,
    ],
    imports: [
       BrowserModule,
