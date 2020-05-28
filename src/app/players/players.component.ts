@@ -9,6 +9,8 @@ export class PlayersComponent implements OnInit {
 
   public title = "Players";
 
+  public playerSelected: string;
+
   public players = [
     { id: 1, name: 'Zig', mod: 'fps', phone: 71701190  },
     { id: 2, name: 'Yuuk', mod: 'fps', phone: 72701490  },
@@ -16,6 +18,14 @@ export class PlayersComponent implements OnInit {
     { id: 4, name: 'Nesk', mod: 'fps', phone: 70751291  },
     { id: 5, name: 'bulleT', mod: 'fps', phone: 70791270  },
   ];
+
+  back() {
+    this.playerSelected = '';
+  }
+
+  playerSelect(player: any) {
+    this.playerSelected = player.name;
+  }
 
   constructor() { }
 
