@@ -1,46 +1,31 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a routerLink="dashboard" class="navbar-brand">Smart Team</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a routerLink="players" routerLinkActive="active" class="nav-link">Players <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="coaches" routerLinkActive="active" class="nav-link">Coaches</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="profile" routerLinkActive="active" class="nav-link">Profile</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav">
-      <div class="btn-group" dropdown>
-        <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
-                aria-controls="dropdown-basic">
-          Button dropdown <span class="caret"></span>
-        </button>
-        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
-            role="menu" aria-labelledby="button-basic">
-          <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-          <li class="divider dropdown-divider"></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-          </li>
-        </ul>
-      </div>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-    </ul>
+  <div class="container">
+    <a routerLink="dashboard" class="navbar-brand">Smart Team</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a routerLink="players" routerLinkActive="active" class="nav-link">Players <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="coaches" routerLinkActive="active" class="nav-link">Coaches</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav" dropdown>
+        <li class="nav-item dropdown">
+          <a id="button-basic" dropdownToggle class="nav-link dropdown-toggle"
+          id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">
+            Vinicius
+          </a>
+          <div id="dropdown-basic" *dropdownMenu class="dropdown-menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a routerLink="profile" class="dropdown-item">Profile</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

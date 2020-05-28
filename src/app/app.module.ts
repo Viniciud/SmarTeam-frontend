@@ -12,6 +12,7 @@ import { TitleComponent } from './title/title.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 @NgModule({
    declarations: [
       AppComponent,
@@ -25,8 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
    imports: [
       BrowserModule,
       AppRoutingModule,
+      BrowserAnimationsModule,
       BsDropdownModule.forRoot(),
-      BrowserAnimationsModule
+
    ],
    providers: [],
    bootstrap: [
