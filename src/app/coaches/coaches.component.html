@@ -1,20 +1,28 @@
-<app-title [title]='title'></app-title>
+<div *ngIf="coachSelected">
+  <app-title [title]="'Coach: ' + coachSelected"></app-title>
+  <br>
+  <button class="btn btn-dark" (click)="back()">Back</button>
+</div>
+<div *ngIf="!coachSelected">
+  <app-title [title]='title'></app-title>
 
-<table class="table table-hover">
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Game</th>
-      <th scope="col">Phone</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let coach of coaches">
-      <th scope="row">{{coach.id}}</th>
-      <td>{{coach.name}}</td>
-      <td>{{coach.game}}</td>
-      <td>{{coach.phone}}</td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Game</th>
+        <th scope="col">Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let coach of coaches" (click)="coachSelect(coach)">
+        <th scope="row">{{coach.id}}</th>
+        <td>{{coach.name}}</td>
+        <td>{{coach.game}}</td>
+        <td>{{coach.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

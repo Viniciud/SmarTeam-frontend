@@ -1,10 +1,7 @@
 <div *ngIf="playerSelected">
   <app-title [title]="'Player: ' + playerSelected"></app-title>
   <br>
-  <br>
   <button class="btn btn-dark" (click)="back()">Back </button>
-  <br>
-  <br>
 </div>
 <div *ngIf="!playerSelected">
   <app-title [title]='title'></app-title>
