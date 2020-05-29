@@ -1,11 +1,29 @@
 <div *ngIf="coachSelected">
-  <app-title [title]="'Coach: ' + coachSelected"></app-title>
-  <br>
-  <button class="btn btn-dark" (click)="back()">Back</button>
+  <div class="row">
+    <div class="mr-auto">
+      <app-title [title]="'Coach: ' + coachSelected"></app-title>
+    </div>
+    <div class="mt-1">
+      <button class="btn btn-dark" (click)="back()">Return</button>
+    </div>
+  </div>
+  <form>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Name</label>
+      <input type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Game</label>
+      <input type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Phone</label>
+      <input type="text" class="form-control" >
+    </div>
+  </form>
 </div>
 <div *ngIf="!coachSelected">
   <app-title [title]='title'></app-title>
-
   <table class="table table-hover">
     <thead class="thead-light">
       <tr>
@@ -25,4 +43,3 @@
     </tbody>
   </table>
 </div>
-

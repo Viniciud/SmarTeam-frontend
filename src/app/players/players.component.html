@@ -1,7 +1,26 @@
 <div *ngIf="playerSelected">
-  <app-title [title]="'Player: ' + playerSelected"></app-title>
-  <br>
-  <button class="btn btn-dark" (click)="back()">Back </button>
+  <div class="row">
+    <div class="mr-auto">
+      <app-title [title]="'Player: ' + playerSelected"></app-title>
+    </div>
+    <div class="mt-1">
+      <button class="btn btn-dark" (click)="back()">Return</button>
+    </div>
+  </div>
+  <form>
+    <div class="form-group">
+      <label for="formGroupExampleInput">Name</label>
+      <input type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Modality</label>
+      <input type="text" class="form-control" >
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">Phone</label>
+      <input type="text" class="form-control" >
+    </div>
+  </form>
 </div>
 <div *ngIf="!playerSelected">
   <app-title [title]='title'></app-title>
