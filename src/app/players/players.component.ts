@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from '../models/player';
 
 @Component({
   selector: 'app-players',
@@ -9,22 +10,22 @@ export class PlayersComponent implements OnInit {
 
   public title = "Players";
 
-  public playerSelected: string;
+  public playerSelected: Player;
 
   public players = [
-    { id: 1, name: 'Zig', mod: 'fps', phone: 71701190  },
-    { id: 2, name: 'Yuuk', mod: 'fps', phone: 72701490  },
-    { id: 3, name: 'SexyCake', mod: 'fps', phone: 75701280  },
-    { id: 4, name: 'Nesk', mod: 'fps', phone: 70751291  },
-    { id: 5, name: 'bulleT', mod: 'fps', phone: 70791270  },
+    { id: 1, name: 'Zig', modality: 'fps', phone: 71701190  },
+    { id: 2, name: 'Yuuk', modality: 'fps', phone: 72701490  },
+    { id: 3, name: 'SexyCake', modality: 'fps', phone: 75701280  },
+    { id: 4, name: 'Nesk', modality: 'fps', phone: 70751291  },
+    { id: 5, name: 'bulleT', modality: 'fps', phone: 70791270  },
   ];
 
   back() {
-    this.playerSelected = '';
+    this.playerSelected = null;
   }
 
-  playerSelect(player: any) {
-    this.playerSelected = player.name;
+  playerSelect(player: Player) {
+    this.playerSelected = player;
   }
 
   constructor() { }
