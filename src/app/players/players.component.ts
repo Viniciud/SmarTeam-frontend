@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../models/player';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-players',
@@ -8,9 +9,10 @@ import { Player } from '../models/player';
 })
 export class PlayersComponent implements OnInit {
 
+  public playerForm: FormGroup;
   public title = "Players";
-
   public playerSelected: Player;
+  public simpleText: string;
 
   public players = [
     { id: 1, name: 'Zig', modality: 'fps', phone: 71701190  },
@@ -20,17 +22,33 @@ export class PlayersComponent implements OnInit {
     { id: 5, name: 'bulleT', modality: 'fps', phone: 70791270  },
   ];
 
+  constructor(private fb: FormBuilder) {
+    this.createForm();
+  }
+
+  ngOnInit(): void {
+
+  }
+
+  createForm() {
+    this.playerForm = this.fb.group({
+      name: ['', Validators],
+      modality: [''],
+      phone: [''],
+    });
+  }
+
+  playerSubmit() {
+    console.log(this.playerForm.value);
+  }
+
   back() {
     this.playerSelected = null;
   }
 
   playerSelect(player: Player) {
     this.playerSelected = player;
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
+    this.playerForm.patchValue(player);
   }
 
 }
